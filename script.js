@@ -54,8 +54,14 @@ if(currentElement === 'E') {
 return count
  }
   
-
- export function aufgabe02(args) {
+ export function aufgabe04(args) {
   const input = args
   const result = []
  }
+
+ export function aufgabe05(args) {
+  const input = args
+  const result = []
+   }
+
+   

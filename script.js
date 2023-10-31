@@ -39,16 +39,23 @@ export function aufgabe02(args) {
 export function aufgabe03(args) {
   const input = args
   const result = []
-
+  let count = 0
 for (let i = 0; i < input.length; i++) {
   const currentElement = input[i]
   //Teste ob ein 'e'enthalten ist
 
-if(currentElement=== 'e') {
-  result.push ("1")
+if(currentElement === 'e') {
+count = count + 1
 }
-}
+if(currentElement === 'E') {
+  count = count + 1
+ }
+  }
+return count
+ }
+  
 
-return result.join("")
-
-}
+ export function aufgabe02(args) {
+  const input = args
+  const result = []
+ }

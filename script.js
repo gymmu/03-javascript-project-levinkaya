@@ -73,9 +73,9 @@ for (let i = 0; i < input.length; i++) {
     // ignoriere Leerschläge
   }else if(currentElement=== currentElement.toUpperCase()) {
     capitalLetters++
-
-
+ }
 }
+
 }
 
 
@@ -85,6 +85,45 @@ if (capitalLetters > 0){
   return false
 }
 
+ 
+
+ export function aufgabe06 (args) {
+  const input = args
+  const result = []
+  
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+
+    
+    if( currentElement === 'a')
+
+ 
+ 
+  return result.join("")
  }
 
 
+ }
+
+export function aufgabe08(args) {
+  const input = args
+  const result = []
+ 
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+ 
+    // Text
+  if (currentElement === 'e') {
+    result.push("3")
+    // Text
+  } else if (currentElement === 'E') {
+    result.push("E")
+ 
+  } else {
+    result.push(currentElement)
+  }
+ 
+ 
+}
+return result.join("")
+}

@@ -144,6 +144,25 @@ export function aufgabe09(args) {
     }
     }
 
+    export function aufgabe10 (args) {
+      const input = args
+      const result = []
+
+      for (let i = 0; i < input.length; i++) {
+        const currentElement = input[i]
+        
+      }
+      
+      return result.join("")
+    }
+
+
+
+
+
+
+
+
     export function aufgabe11(args) {
       //Gib den ASCII code eines einzelnen Buchstabens an.
       const input = args
@@ -177,3 +196,22 @@ export function aufgabe09(args) {
     }
       return -1
    }
+
+//Suche die Position des letzten 'e's in einem Text.
+export function aufgabe13 (args) {
+  const input = args
+  const result = []
+
+  let positionOfLastE = -1
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[input.length - i -1]
+
+    if (currentElement === "e") {
+      return (input.length-1) - i
+    }
+    
+  }
+  
+  return -1
+}

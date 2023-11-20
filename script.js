@@ -156,6 +156,7 @@ export function aufgabe09(args) {
       return result.join("")
     }
 
+    
 
 
 
@@ -214,5 +215,24 @@ export function aufgabe13 (args) {
   }
   
   return -1
+}
+
+//Suche die Position des dritten 'e' in einem Text.
+export function aufgabe14 (args) {
+  const input = args
+  const result = []
+  let countE = 0
+  for (let i = 0; i < input .length; i++) {
+    const currentElement = input[i]
+  if (currentElement === 'e') {
+      countE++
+    if (countE === 3) {
+     return i
+
+      }
+    }
+  }
+  return -1
+ 
 }
 

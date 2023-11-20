@@ -144,21 +144,28 @@ export function aufgabe09(args) {
     }
     }
 
-    export function aufgabe10 (args) {
-      const input = args
-      const result = []
-
-      for (let i = 0; i < input.length; i++) {
-        const currentElement = input[i]
-        
-      }
-      
-      return result.join("")
-    }
-
     
-
-
+export function aufgabe10(args) {
+    const input = args
+   
+    if (input.length !== 7) return false
+    if (input[0] !== "#") return false
+ 
+    for (let i = 1; i < input.length; i++) {
+      const currentElement = input[i]
+      const ascii = currentElement.charCodeAt(0)
+      if (48 <= ascii && ascii <= 57) {
+       } else if (65 <= ascii && ascii <= 70) {
+       }   else {
+            return false
+       
+       
+      }
+     
+    }
+ 
+    return true
+  }
 
 
 
@@ -235,6 +242,18 @@ export function aufgabe14 (args) {
   return -1
  
 }
+
+//Sollte Name und Alter schreiben
+export function aufgabe18 (args) {
+  const input = args
+  const result = []
+  
+  return result.join("")
+}
+
+
+
+
 //Verdopple alle Zeichen die in der Eingabe enthalten sind
 export function aufgabe19(args) {
   const input = args

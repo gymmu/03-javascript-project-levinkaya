@@ -243,10 +243,51 @@ export function aufgabe14 (args) {
  
 }
 
-//Sollte Name und Alter schreiben
-export function aufgabe18 (args) {
+export function aufgabe17 (args) {
   const input = args
   const result = []
+  const text = "Erster Satz. Und ein zweiter Satz. Auch noch ein dritter Satz."
+  const phrases = []
+  let currentPhrase = []
+  for (let i = 0; i < text.length; i++) {
+    const currentElement = text[i]
+    if (currentElement === '.') {
+      // Wenn wir hier sind haben wir einen '.' gefunden, und möchten den aktuellen Satz als eine Element in phrases speichern.
+      phrases.push(currentPhrase.join(""))
+      currentPhrase = []  // Damit löschen wir alles was im aktuellen Satz drin war.
+    } else {
+      // Wenn wir keinen '.' lesen, dann möchten wir die Zeichen an den aktuellen Satz anhängen.
+      currentPhrase.push(currentElement)
+    }
+  }
+  return phrases
+  return result.join("")
+}
+
+
+
+
+//Sollte Name und Alter schreiben
+export function aufgabe18 (args) {
+  const input = "17 Julia"
+  const result = []
+  const text = "Ich heisse Julia und bin 17 Jahre alt."
+  const phrases = []
+  let currentPhrase = []
+  for (let i = 0; i < args.length; i++) {
+    const currentElement = [i]
+    if (currentElement === ',') {
+      // Wenn wir hier sind haben wir einen '.' gefunden, und möchten den aktuellen Satz als eine Element in phrases speichern.
+      phrases.push(currentPhrase.join(""))
+      currentPhrase = []  // Damit löschen wir alles was im aktuellen Satz drin war.
+    } else {
+      // Wenn wir keinen '.' lesen, dann möchten wir die Zeichen an den aktuellen Satz anhängen.
+      currentPhrase.push(currentElement)
+    }
+  }
+  return phrases
+
+
   
   return result.join("")
 }
@@ -268,4 +309,20 @@ export function aufgabe19(args) {
   return result.join("")
 }
 
-
+// der Text wird in eine Liste umgewandelt, das benötigt man, wenn man Elemente vertauschen möchte.
+export function aufgabe26 (args) {
+  const list = args. split("") 
+  for (let i = 0; i < list.length - 1; i++) { 
+  const currentElement = list[i]
+  const nextElement = list[i+1]
+  if (currentElement.charCodeAt(0) > nextElement.charCodeAt(0)) { 
+const tmp = list[i+1]
+list[i] = list[i]
+list[i]= tmp
+i= 0
+  }
+   }
+  const result = list.join("")
+  return (result)
+   }
+    

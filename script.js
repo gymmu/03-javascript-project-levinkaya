@@ -322,6 +322,27 @@ export function aufgabe19(args) {
   return result.join("")
 }
 
+//Prüfen Sie ob nach jedem `.` ein Leerschlag kommt.
+export function aufgabe20 (args) {
+  const input = args
+  const result = []
+ 
+ 
+  for(let i =0; i < input.length; i++) {
+    const currentElement = input[i]
+ 
+    if (currentElement === ".") {
+      if (input[i+1] === " ")  {
+        return true
+      }
+ 
+    }
+ 
+}
+  return false
+}
+ 
+
 //Text verwandeln um Elemente zu vertauschen
 export function aufgabe26 (args) {
   const list = args. split("") 

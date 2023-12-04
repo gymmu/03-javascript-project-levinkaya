@@ -342,6 +342,7 @@ export function aufgabe20 (args) {
   return false
 }
  
+ 
 
 //Text verwandeln um Elemente zu vertauschen
 export function aufgabe26 (args) {

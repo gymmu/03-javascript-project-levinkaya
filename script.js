@@ -59,32 +59,27 @@ return count
   const result = []
   }
 
- export function aufgabe05(args) {
-  const input = args
-  const result = []
+
+
+  export function aufgabe05(args) {
+    const input = args
+    const result = []
   let capitalLetters = 0
+   
+    for (let i = 0; i < input.length; i++) {
+      const currentElement = input[i]
+      //Teste ob in einem Text mindestens ein Grossbuchstabe vorkommt
 
-//Setzte den counter auf 0
-for (let i = 0; i < input.length; i++) {
-  const currentElement = input[i]
-  if ( currentElement ==="."){
-    //do nothing
-  }else if(currentElement=== " "){
-    // ignoriere Leerschläge
-  }else if(currentElement=== currentElement.toUpperCase()) {
-    capitalLetters++
- }
-}
-if (capitalLetters > 0){
-  return true
-} else {
-  return false
-}
-}
+      const ascii = currentElement.charCodeAt(0)
+   
+      if ( 65 <= ascii && ascii <= 90) {
+        return true
+      }
+    }
+    return false
+  }
 
 
-
- 
 
  export function aufgabe06 (args) {
   const input = args
@@ -243,15 +238,34 @@ export function aufgabe14 (args) {
  
 }
 
-export function aufgabe17 (args) {
+export function aufgabe15 (args) {
   const input = args
   const result = []
-  const text = "Erster Satz. Und ein zweiter Satz. Auch noch ein dritter Satz."
+ 
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+ 
+//Stelle das Leerzeichen fest.
+    if (currentElement === ' ') {
+    return result.join("")
+  }
+  //Falls kein Leerzeichen vorhanden ist, unterbrich nicht.
+  result.push(currentElement)
+ 
+}
+ 
+return result.join("")
+ 
+}
+
+
+export function aufgabe17 (args) {
+  const text = args
   const phrases = []
   let currentPhrase = []
   for (let i = 0; i < text.length; i++) {
     const currentElement = text[i]
-    if (currentElement === '.') {
+    if (currentElement === ',') {
       // Wenn wir hier sind haben wir einen '.' gefunden, und möchten den aktuellen Satz als eine Element in phrases speichern.
       phrases.push(currentPhrase.join(""))
       currentPhrase = []  // Damit löschen wir alles was im aktuellen Satz drin war.
@@ -261,7 +275,6 @@ export function aufgabe17 (args) {
     }
   }
   return phrases
-  return result.join("")
 }
 
 
@@ -269,7 +282,7 @@ export function aufgabe17 (args) {
 
 //Sollte Name und Alter schreiben
 export function aufgabe18 (args) {
-  const input = "17 Julia"
+  const input = "17  Julia"
   const result = []
   const text = "Ich heisse Julia und bin 17 Jahre alt."
   const phrases = []
@@ -309,7 +322,7 @@ export function aufgabe19(args) {
   return result.join("")
 }
 
-// der Text wird in eine Liste umgewandelt, das benötigt man, wenn man Elemente vertauschen möchte.
+//Text verwandeln um Elemente zu vertauschen
 export function aufgabe26 (args) {
   const list = args. split("") 
   for (let i = 0; i < list.length - 1; i++) { 
@@ -317,7 +330,7 @@ export function aufgabe26 (args) {
   const nextElement = list[i+1]
   if (currentElement.charCodeAt(0) > nextElement.charCodeAt(0)) { 
 const tmp = list[i+1]
-list[i] = list[i]
+list[+1] = list[i]
 list[i]= tmp
 i= 0
   }
@@ -325,4 +338,46 @@ i= 0
   const result = list.join("")
   return (result)
    }
-    
+
+   export function aufgabe27 (args) {
+    const input = args
+    const result = []
+    //Testen sie, ob eine Eingabe eine Zahl ist.
+    if (input.length === 0) {return false}
+    for (let i = 0; i < input.length; i++) {
+   
+      const currentElement = input[i]
+      const ascii = currentElement.charCodeAt(0)
+      if (48 <= ascii && ascii <= 57) {
+   
+      }
+      else return false
+    }
+    return true
+  }
+
+
+   export function bubbleSort(args) {
+ 
+    const text = args
+    const list = text.split("") //satz
+    for (let i = 0; i < list.length - 1; i++) {
+      const currentElement = list[i]
+      const nextElement = list[i+1]
+      if (currentElement.charCodeAt(0) > nextElement.charCodeAt(0)) {
+   
+        //satz
+        const tmp = list[i + 1]
+        list[i + 1] = list[i]
+        list[i] = tmp
+        i = -1 //satz
+    }
+  }
+    const result = list.join("")
+    console.log(result)
+   
+    return result
+   
+   
+  }
+  

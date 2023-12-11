@@ -81,22 +81,60 @@ return count
 
 
 
- export function aufgabe06 (args) {
-  const input = args
-  const result = []
-  
-  for (let i = 0; i < input.length; i++) {
-    const currentElement = input[i]
+  export function aufgabe06 (args) {
+    const input = args
+   
+   
+    for (let i = 1; i < input.length; i++) {
+      const currentElement = input[i]
+      const ascii = currentElement.charCodeAt(0)
+      if (48<= ascii && ascii <= 57) {
+        // mache nichts; ist eine Zahl
 
-    
-    if( currentElement === 'a')
+      } else if (65<= ascii && ascii <= 90) {
+        // mache nichts; ist A-Z
 
+      }else if (97<= ascii && ascii <= 122) {
+        // mache nichts; ist a-z
+
+      }else if (currentElement=== " ") {
+
+     
+
+
+      } else {
+        return true
+      }
+    }
+    return false
+  }
+
+
+export function aufgabe07 (args) {
+    const input = args
+    const result = []
  
+    for (let i = 0; i < input.length; i++) {
+      const currentElement = input[i]
  
-  return result.join("")
- }
+    // Wird getestet, ob das Wort "und" im Text enthalten ist.
+      if(currentElement === "u") {
+        if (input[i+1]=== "n") {
+          if (input[i+2]=== "d") {
+            return true
+          }
+        }
+      }
+    }
+    return false // Wenn kein "und" im Text enthalten ist, ist die Aussage falsch und es wird abgebrochen.
+  }
 
- }
+
+
+
+
+
+
 
 
 
@@ -341,7 +379,16 @@ export function aufgabe20 (args) {
 }
   return false
 }
- 
+
+  const input = args
+  const result = []
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+  }
+  return result.join("")
+
+
+  
  
 
 //Text verwandeln um Elemente zu vertauschen
@@ -403,3 +450,5 @@ i= 0
    
   }
   
+
+

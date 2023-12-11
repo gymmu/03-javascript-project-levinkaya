@@ -392,6 +392,15 @@ for (let i = input.length -1; i>=0; i--) {
 }
  
 
+
+
+export function aufgabe25 (args) {
+  const input = args
+  const result = []
+  
+  return result.join("")
+}
+
 //Text verwandeln um Elemente zu vertauschen
 export function aufgabe26 (args) {
   const list = args. split("") 

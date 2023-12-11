@@ -297,22 +297,18 @@ return result.join("")
 }
 
 
-export function aufgabe17 (args) {
-  const text = args
-  const phrases = []
-  let currentPhrase = []
-  for (let i = 0; i < text.length; i++) {
-    const currentElement = text[i]
-    if (currentElement === ',') {
-      // Wenn wir hier sind haben wir einen '.' gefunden, und möchten den aktuellen Satz als eine Element in phrases speichern.
-      phrases.push(currentPhrase.join(""))
-      currentPhrase = []  // Damit löschen wir alles was im aktuellen Satz drin war.
-    } else {
-      // Wenn wir keinen '.' lesen, dann möchten wir die Zeichen an den aktuellen Satz anhängen.
-      currentPhrase.push(currentElement)
-    }
-  }
-  return phrases
+
+export function aufgabe17(args) {
+  const input = args;
+  const result = input.split(',') //das result ist der input der mit einem , getrennt ist.
+ 
+ 
+for (let i = 0; i < input.length; i++) {
+  const currentElement = input[i]
+ 
+}
+ 
+  return result.join(',') //da result wird zurückgegeben.
 }
 
 
@@ -380,15 +376,20 @@ export function aufgabe20 (args) {
   return false
 }
 
+
+
+
+export function aufgabe21 (args) {
   const input = args
   const result = []
-  for (let i = 0; i < input.length; i++) {
-    const currentElement = input[i]
-  }
+ 
+for (let i = input.length -1; i>=0; i--) {
+  const currentElement = input[i]
+  result.push(currentElement)//kehrt die Eingabe um.
+ 
+}
   return result.join("")
-
-
-  
+}
  
 
 //Text verwandeln um Elemente zu vertauschen
@@ -425,6 +426,21 @@ i= 0
     return true
   }
 
+
+  export function  aufgabe28 (args) {
+    const input = args
+    const zahlen = input.split(' ')
+   
+    if (zahlen.length === 2 && !isNaN(zahlen[0]) && !isNaN(zahlen[1])) {
+      const zahl1 = parseFloat(zahlen[0]);
+      const zahl2 = parseFloat(zahlen[1]);
+     
+      const summe = zahl1 + zahl2;
+      return `${summe}`;
+  } else {
+      return null;
+  }
+  }
 
    export function bubbleSort(args) {
  

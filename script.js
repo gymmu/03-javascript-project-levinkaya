@@ -53,11 +53,25 @@ if(currentElement === 'E') {
   }
 return count
  }
-  
+
  export function aufgabe04(args) {
   const input = args
   const result = []
+  let count = 0
+  assert.equal(res,4)
+ 
+  // Sollte 4 Wörter zählen.
+  for (let i = 0; i < input.length; i++) {
+const currentElement = input[i]
+ 
+if (currentElement === ' '){
+count = count + 1
+ 
+}
   }
+  count = count + 1
+  return count
+}
 
 
 
@@ -145,10 +159,10 @@ export function aufgabe08(args) {
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
  
-    // Text
+   //ersetzt "e" mit "3"
   if (currentElement === 'e') {
     result.push("3")
-    // Text
+  
   } else if (currentElement === 'E') {
     result.push("E")
  
@@ -188,7 +202,9 @@ export function aufgabe10(args) {
       const currentElement = input[i]
       const ascii = currentElement.charCodeAt(0)
       if (48 <= ascii && ascii <= 57) {
+        //mach nichts: ist eine Zahl
        } else if (65 <= ascii && ascii <= 70) {
+        // mache nichts: ist A-F
        }   else {
             return false
        
@@ -227,7 +243,7 @@ export function aufgabe10(args) {
    export function aufgabe12 (args) {
     const input = args
 
-    
+    // Position des ersten "e" suchen
     for (let i = 0; i < input.length; i++) {
       const currentElement = input[i]
       if (currentElement === 'e') { 
@@ -357,6 +373,7 @@ export function aufgabe19(args) {
   const result = []
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
+    // es wird zu jedem Element ein Element nochmals angesetzt
     result.push(currentElement)
     result.push(currentElement)
   
@@ -521,20 +538,20 @@ i= 0
    export function bubbleSort(args) {
  
     const text = args
-    const list = text.split("") //satz
+    const list = text.split("") //Damit wandeln wir den Text in eine Liste um, das brauchen wir, wenn wir Elemente vertauschen möchte.
     for (let i = 0; i < list.length - 1; i++) {
       const currentElement = list[i]
       const nextElement = list[i+1]
       if (currentElement.charCodeAt(0) > nextElement.charCodeAt(0)) {
    
-        //satz
+        //Reihenfolge stimmt nicht, Elemente müssen getauscht werden.
         const tmp = list[i + 1]
         list[i + 1] = list[i]
         list[i] = tmp
-        i = -1 //satz
+        i = -1 //starte von vorene wenn etwas vertauscht wurde.
     }
   }
-    const result = list.join("")
+    const result = list.join("") // mache text
     console.log(result)
    
     return result

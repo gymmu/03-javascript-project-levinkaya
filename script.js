@@ -424,12 +424,30 @@ export function aufgabe22 (args) {
   return result.join("")
 }
 
-export function aufgabe23 (args) {
-  const input = args
-  const result = []
-  
-  return result.join("")
-}
+
+
+export function aufgabe23(args) {
+    const input = args;
+    const result = [];
+ 
+    if (input.length === 0) {
+      return ''; // Soll leer zurückgeben
+    }
+ 
+    const firstChar = input.charAt(0);
+ 
+    result.push(firstChar); // Soll erstes Zeichen am Anfang der Ausgabe anhängen
+ 
+    for (let i = 0; i < input.length; i++) {
+      const currentElement = input[i];
+      result.push(currentElement);
+    }
+ 
+    result.push(firstChar); // Soll erstes Zeichen am Schluss der Ausgabe anhängen
+ 
+    return result.join('');
+  }
+ 
 
 
 export function aufgabe24 (args) {

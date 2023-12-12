@@ -417,12 +417,31 @@ for (let i = input.length -1; i>=0; i--) {
   return result.join("")
 }
  
+// alle Zeichen aus der Eingabe mit `_` ersetzten, bis zum ersten `k`
 export function aufgabe22 (args) {
+ 
   const input = args
   const result = []
-  
+  let firstPart = true
+   
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+   
+    if (firstPart === true) {
+      result.push("_")
+    } else {
+      result.push(currentElement)
+    }
+   
+   
+    if (currentElement === 'k') {
+      firstPart = false
+    }
+   
+  }
   return result.join("")
-}
+  }
+  
 
 
 

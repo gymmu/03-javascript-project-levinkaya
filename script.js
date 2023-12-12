@@ -298,6 +298,15 @@ return result.join("")
 
 
 
+
+
+export function aufgabe16 (args) {
+  const input = args
+  const result = []
+  
+  return result.join("")
+}
+
 export function aufgabe17(args) {
   const input = args;
   const result = input.split(',') //das result ist der input der mit einem , getrennt ist.

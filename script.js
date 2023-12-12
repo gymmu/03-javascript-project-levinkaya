@@ -317,7 +317,7 @@ for (let i = 0; i < input.length; i++) {
  
 }
  
-  return result.join(',') //da result wird zurückgegeben.
+  return result.join(',') //das result wird zurückgegeben.
 }
 
 
@@ -400,15 +400,73 @@ for (let i = input.length -1; i>=0; i--) {
   return result.join("")
 }
  
-
-
-
-export function aufgabe25 (args) {
+export function aufgabe22 (args) {
   const input = args
   const result = []
   
   return result.join("")
 }
+
+export function aufgabe23 (args) {
+  const input = args
+  const result = []
+  
+  return result.join("")
+}
+
+
+export function aufgabe24 (args) {
+  const input = args
+  const result = []
+  
+  return result.join("")
+}
+
+
+//das mittlere Zeichen der Eingabe soll gelöscht weren.
+export function aufgabe25 (args) {
+  const input = args
+  const result = []
+ 
+  if (input.length % 2 === 0) {
+  //Prüft ob Input.length gerade ist.
+ 
+ //brauchen -1 um auf position zu kommen, weil wir bei 0 zu zählen beginnen.
+const pos = input.length / 2 - 1
+ 
+for (let i = 0; i < input.length; i++) {
+  const currentElement = input[i]
+  if (i === pos || i === pos + 1){
+    //macht nichts.
+  }else {
+    result.push(currentElement)
+}
+}
+ 
+ 
+  } else {  
+     //Input.length ist ungerade 
+
+
+ 
+  const pos = Math.floor (input.length / 2 )
+//Das mittlere Zeichen soll gelöscht werden
+for (let i = 0; i < input.length; i++) {
+  const currentElement = input[i]
+ 
+  if (i === pos){
+//macht nichts
+}else {
+  result.push(currentElement)
+}
+}
+}
+  return result.join("")
+}
+ 
+
+ 
+ 
 
 //Text verwandeln um Elemente zu vertauschen
 export function aufgabe26 (args) {

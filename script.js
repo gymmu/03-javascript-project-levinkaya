@@ -551,7 +551,7 @@ i= 0
         i = -1 //starte von vorene wenn etwas vertauscht wurde.
     }
   }
-    const result = list.join("")
+    const result = list.join("") // mache text
     console.log(result)
    
     return result

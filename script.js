@@ -462,19 +462,30 @@ export function aufgabe23(args) {
       result.push(currentElement);
     }
  
-    result.push(firstChar); // Soll erstes Zeichen am Schluss der Ausgabe anhängen
+    result.push(firstChar); //Soll erstes Zeichen am Schluss der Ausgabe anhängen
  
     return result.join('');
   }
  
 
-
-export function aufgabe24 (args) {
-  const input = args
-  const result = []
-  
-  return result.join("")
-}
+ //Das erste und das letzte Zeichen der Eingabe sollen vertauscht werden.
+  export function aufgabe24 (args) {
+    const input = args
+    const result = []
+   
+    if (input.length === 1) return input
+    const firstElem=input[0]
+    const lastElem=input[input.length-1]
+   
+    result.push(lastElem)
+    for (let i = 1; i < input.length -1; i++) {
+      const currentElement = input[i]
+      result.push(currentElement)
+    }
+   
+  result.push(firstElem)
+    return result.join("")
+  }
 
 
 //das mittlere Zeichen der Eingabe soll gelöscht weren.
